@@ -6,7 +6,7 @@
 
 ## 実行方法
 
-### Google **Colaboratory**
+### Google Colaboratory
 
 1. 「Code」ボタンをクリックしてコードをダウンロードします。
 2. ダウンロードしたassignmentのフォルダをGoogleドライブにアップロードします。
