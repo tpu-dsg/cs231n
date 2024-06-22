@@ -18,7 +18,7 @@
             "userGid": "automatic"
         }
 	},
-	"postStartCommand": "poetry install",
+	"postStartCommand": "poetry install && poetry run pre-commit install",
     "remoteUser": "vscode",
     "customizations": {
         "vscode": {

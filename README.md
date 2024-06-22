@@ -29,3 +29,21 @@ Docker・[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-nat
 ## 貢献方法
 
 [リポジトリへの貢献ガイド](https://github.com/tpu-dsg/.github/blob/main/CONTRIBUTING.md)を参照してください。
+
+コードの品質を保つために`pre-commit`を使用しています。`*ipynb`,`*.py`ファイルをコミットする前に以下の手順で`pre-commit`をセットアップしてください。（Dockerでは自動でセットアップされるので`poetry shell`を実行するだけです！）
+
+1. 依存関係のインストール
+
+    リポジトリの`pyproject.toml`を使用している場合はインストール済みなので不要です。
+    ```bash
+    pip install pre-commit nbdev ruff
+    ```
+
+2. Git フックのインストール
+
+    Poetry環境は事前に`poetry shell`を実行してください。
+    ```bash
+    pre-commit install
+    ```
+
+これでコミット時にJupyter Notebookの不要なメタデータの削除とコードフォーマットが行われるようになりました。コミット時に`pre-commit`が**Failed**となった場合は新たな差分ができているので、ステージして再コミットしてください。
