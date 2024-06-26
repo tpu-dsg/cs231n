@@ -1,6 +1,7 @@
 # cs231n
 
 [![Licence](https://img.shields.io/github/license/tpu-dsg/cs231n)](./LICENSE)
+[![CI](https://github.com/tpu-dsg/cs231n/actions/workflows/ci.yaml/badge.svg)](https://github.com/tpu-dsg/cs231n/actions/workflows/ci.yaml)
 
 スタンフォード大学の講義 [cs231n: Deep Learning for Computer Vision](https://cs231n.stanford.edu/) の日本語訳
 
