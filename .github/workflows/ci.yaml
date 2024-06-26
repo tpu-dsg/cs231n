@@ -1,0 +1,44 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install poetry
+        run: pipx install poetry
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "poetry"
+      - name: Install dependencies
+        run: poetry install
+      - name: Remove matadata
+        if: ${{ github.event_name == 'pull_request' }}
+        run: poetry run nbdev_clean
+      - name: Check code format
+        if: ${{ github.event_name == 'push' }}
+        run: poetry run ruff format --check .
+      - name: Format code
+        if: ${{ github.event_name == 'pull_request' }}
+        run: poetry run ruff format .
+      - name: Check diff
+        if: ${{ github.event_name == 'pull_request' }}
+        id: diff
+        run: |
+          git add .
+          git diff --name-only --exit-code
+        continue-on-error: true
+      - name: Push changes
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Clean notebooks and format code" || echo "No changes to commit"
+          git push origin ${{ github.head_ref }}
