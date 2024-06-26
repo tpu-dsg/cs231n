@@ -35,7 +35,7 @@ jobs:
           git diff --name-only --exit-code
         continue-on-error: true
       - name: Push changes
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'pull_request' }} && ${{ steps.diff.outcome == 'failure' }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
