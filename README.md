@@ -24,8 +24,11 @@ Docker・[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-nat
 
 ## 教材
 
-- [講義資料(英語)](https://cs231n.stanford.edu/schedule.html)
-- [2017年講義動画(英語)](https://youtube.com/playlist?list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&si=A-w05a3qxL9TKhBu)
+- [2017年講義動画（英語）](https://youtube.com/playlist?list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&si=A-w05a3qxL9TKhBu)
+- [コース教材（英語）](https://cs231n.stanford.edu/schedule.html)
+- [コース教材（日本語）](https://tpu-dsg.github.io/cs231n/)
+
+日本語のコース教材はこのリポジトリで管理されています。詳しくは[こちら](./docs/README.md)をご覧ください。
 
 ## 貢献方法
 
