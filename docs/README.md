@@ -9,6 +9,7 @@ cs231nの日本語訳教材。
 - [mdBook](https://github.com/rust-lang/mdBook)
   - [mdbook-mermaid](https://github.com/badboy/mdbook-mermaid)
   - [mdbook-admonish](https://github.com/tommilligan/mdbook-admonish)
+  - [mdbook-toc](https://github.com/badboy/mdbook-toc)
 
 Dockerユーザであれば[`compose.yaml`](./compose.yaml)を利用できるので環境構築の必要はありません。
 
@@ -48,6 +49,7 @@ GROUPID=1000
 - [Mermaid](https://mermaid.js.org/intro/)
   - ([mdbook-mermaid](https://github.com/badboy/mdbook-mermaid)によってサポート)
 - [mdbook-admonish](https://tommilligan.github.io/mdbook-admonish/)
+- [mdbook-toc](https://github.com/badboy/mdbook-toc)
 
 `compose.yaml`では以下のイメージを使用しています。
 
