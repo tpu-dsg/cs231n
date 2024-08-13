@@ -14,8 +14,8 @@ git-repository-url = "https://github.com/tpu-dsg/cs231n"
 edit-url-template = "https://github.com/tpu-dsg/cs231n/edit/main/docs/{path}"
 site-url = "/cs231n/"
 mathjax-support = true
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
-additional-css = ["./mdbook-admonish.css"]
+additional-js = ["assets/mermaid.min.js", "assets/mermaid-init.js"]
+additional-css = ["assets/mdbook-admonish.css"]
 
 [output.html.code]
 hidelines = { python = "~" }
