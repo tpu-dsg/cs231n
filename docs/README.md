@@ -46,6 +46,7 @@ GROUPID=1000
 この日本語訳教材は以下の記法をサポートしています。
 
 - [Markdown - mdBook Documentation](https://rust-lang.github.io/mdBook/format/markdown.html)
+- [MathJax - mdBook Documentation](https://rust-lang.github.io/mdBook/format/mathjax.html)
 - [Mermaid](https://mermaid.js.org/intro/)
   - ([mdbook-mermaid](https://github.com/badboy/mdbook-mermaid)によってサポート)
 - [mdbook-admonish](https://tommilligan.github.io/mdbook-admonish/)
