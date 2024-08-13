@@ -1,0 +1,30 @@
+[book]
+title = "cs231n materials"
+description = "cs231nの日本語訳教材"
+authors = ["Deep Learning Study Group"]
+language = "ja"
+multilingual = false
+src = "src"
+
+[build]
+create-missing = false
+
+[output.html]
+git-repository-url = "https://github.com/tpu-dsg/cs231n"
+edit-url-template = "https://github.com/tpu-dsg/cs231n/edit/main/docs/{path}"
+site-url = "/cs231n/"
+mathjax-support = true
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+additional-css = ["./mdbook-admonish.css"]
+
+[output.html.code]
+hidelines = { python = "~" }
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
