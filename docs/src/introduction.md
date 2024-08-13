@@ -11,3 +11,7 @@
 ## 貢献方法
 
 この翻訳プロジェクトはオープンソースであり、誰でも貢献することができます。誤字脱字や翻訳の改善提案については右上のアイコンまたは[GitHubリポジトリ](https://github.com/tpu-dsg/cs231n)からお願いいたします。
+
+## ライセンス
+
+この日本語訳教材は[MITライセンス](https://github.com/tpu-dsg/cs231n/blob/main/LICENSE)の下に公開されています。また原文についても[MITライセンス](https://github.com/cs231n/cs231n.github.io/blob/master/LICENSE)の下に公開されています。
