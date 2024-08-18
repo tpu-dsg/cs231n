@@ -26,7 +26,8 @@
                 "ms-python.python",
                 "tamasfe.even-better-toml",
                 "ms-toolsai.jupyter",
-                "charliermarsh.ruff"
+                "charliermarsh.ruff",
+                "redhat.vscode-yaml"
             ]
         }
     }
