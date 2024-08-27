@@ -16,7 +16,7 @@ poetry install --only docs
 pip install mkdocs mkdocs-material
 ```
 
-`pip`を使用する場合、最新の依存関係は[`pyproject.toml`](https://github.com/tpu-dsg/cs231n/blob/docs/pyproject.toml)で確認してください。
+`pip`を使用する場合、最新の依存関係は[`pyproject.toml`](https://github.com/tpu-dsg/cs231n/blob/main/pyproject.toml)で確認してください。
 
 ### プレビューサーバーの起動
 
