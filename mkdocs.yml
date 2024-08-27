@@ -1,0 +1,64 @@
+site_name: cs231n日本語訳
+site_url: https://tpu-dsg.github.io/cs231n
+site_description: スタンフォード大学の講義"CS231n"の非公式日本語訳
+site_author: Deep Learning Study Group
+repo_url: https://github.com/tpu-dsg/cs231n
+repo_name: tpu-dsg/cs231n
+copyright: Copyright &copy; 2024 Deep Learning Study Group
+theme:
+  name: material
+  language: ja
+  palette:
+    scheme: slate
+    primary: indigo
+  font:
+    text: Noto Sans JP
+    code: Noto Sans Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+  icon:
+    repo: fontawesome/brands/github
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/tpu-dsg/
+  generator: false
+markdown_extensions:
+  - abbr
+  - admonition
+  - footnotes
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: github-dark
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+plugins:
+  - search:
+      lang: ja
+extra_javascript: 
+  - assets/js/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - はじめに: index.md
+  - Lecture 2: 
+    - lecture2/index.md
+    - 画像分類: lecture2/classification.md
+    - 線形分類: lecture2/linear-classify.md
+  - Lecture 3: 
+    - lecture3/index.md
+    - 最適化: lecture3/optimization.md
+  - Lecture 4:
+    - lecture4/index.md
+    - バックプロパゲーション: lecture4/backpropagation.md
+  - Lecture 5:
+    - lecture5/index.md
+    - 畳み込みニューラルネットワーク: lecture5/cnn.md
+exclude_docs: |
+  README.md
