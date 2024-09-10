@@ -34,3 +34,10 @@ Docker・[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-nat
 ## 貢献方法
 
 [リポジトリへの貢献ガイド](https://github.com/tpu-dsg/.github/blob/main/CONTRIBUTING.md)を参照してください。
+
+コミット前には、以下のコマンドでNotebookの不要なメタデータの削除とコードスタイルのフォーマットを行ってください。
+
+```bash
+nbdev_clean
+ruff format .
+```
