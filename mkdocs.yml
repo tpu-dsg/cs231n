@@ -62,5 +62,7 @@ nav:
   - Lecture 5:
     - lecture5/index.md
     - 畳み込みニューラルネットワーク: lecture5/cnn.md
+  - Lecture 7:
+    - lecture7/index.md
 exclude_docs: |
   README.md
