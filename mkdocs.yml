@@ -64,5 +64,6 @@ nav:
     - 畳み込みニューラルネットワーク: lecture5/cnn.md
   - Lecture 7:
     - lecture7/index.md
+    - 回帰型ニューラルネットワーク: lecture7/rnn.md
 exclude_docs: |
   README.md
