@@ -52,7 +52,9 @@ $$
 h_t=\tanh(W_{hh}h_{t-1}+W_{xh}x_t)
 $$
 
-![](../assets/images/lecture7/vanilla_rnn_mformula_1.png){ loading=lazy }
+<figure markdown="span">
+    ![](../assets/images/lecture7/vanilla_rnn_mformula_1.png){ loading=lazy }
+</figure>
 
 予測は隠れ状態 $h_t$ に基づいて行われ、隠れ状態の上にさらに別の行列射影を適用することで実現できます。これがニューラルネットワークを構築する際のもっとも単純なケースです：
 
