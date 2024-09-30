@@ -31,6 +31,8 @@ markdown_extensions:
   - abbr
   - admonition
   - footnotes
+  - attr_list
+  - md_in_html
   - pymdownx.highlight:
       use_pygments: true
       pygments_style: github-dark
@@ -60,5 +62,8 @@ nav:
   - Lecture 5:
     - lecture5/index.md
     - 畳み込みニューラルネットワーク: lecture5/cnn.md
+  - Lecture 7:
+    - lecture7/index.md
+    - 回帰型ニューラルネットワーク: lecture7/rnn.md
 exclude_docs: |
   README.md
