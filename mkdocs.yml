@@ -65,5 +65,8 @@ nav:
   - Lecture 7:
     - lecture7/index.md
     - 回帰型ニューラルネットワーク: lecture7/rnn.md
+  - Lecture 8:
+    - lecture8/index.md
+    - Attention: lecture8/attention.md
 exclude_docs: |
   README.md
