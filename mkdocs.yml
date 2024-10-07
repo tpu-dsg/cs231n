@@ -68,5 +68,7 @@ nav:
   - Lecture 8:
     - lecture8/index.md
     - Attention: lecture8/attention.md
+    - Transformers: lecture8/transformers.md
 exclude_docs: |
   README.md
+  

@@ -1,6 +1,8 @@
 # Lecture 8: AttentionとTransformers
 
 - [Attention](./attention.md)（[原文](https://cs231n.github.io/attention/)）
+- [Transformers](./transformers.md)（[原文](https://cs231n.github.io/transformers/)）
+
 
 ## 扱う内容
 
