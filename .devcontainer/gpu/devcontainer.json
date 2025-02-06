@@ -1,29 +1,29 @@
 {
 	"name": "cs231n-py3-gpu",
 	"build": {
-        "dockerfile": "./Dockerfile"
-    },
-	"runArgs": ["--gpus", "all","--shm-size","1g"],
+		"dockerfile": "./Dockerfile"
+	},
+	"runArgs": [
+		"--gpus",
+		"all",
+		"--shm-size",
+		"1g"
+	],
 	"containerEnv": {
 		"TZ": "Asia/Tokyo"
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/python:1": {
-            "installTools": false,
-            "version": "3.10"
-        },
-		"ghcr.io/devcontainers-contrib/features/poetry:2": {},
 		"ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": false,
-            "installOhMyZsh": false,
-            "installOhMyZshConfig": false,
-            "upgradePackages": false,
-            "username": "vscode",
-            "userUid": "automatic",
-            "userGid": "automatic"
-        }
+			"installZsh": false,
+			"installOhMyZsh": false,
+			"installOhMyZshConfig": false,
+			"upgradePackages": false,
+			"username": "vscode",
+			"userUid": "automatic",
+			"userGid": "automatic"
+		}
 	},
-	"postStartCommand": "poetry install --with gpu",
+	"postStartCommand": "uv sync",
 	"remoteUser": "vscode",
 	"customizations": {
 		"vscode": {
@@ -32,7 +32,7 @@
 				"charliermarsh.ruff",
 				"tamasfe.even-better-toml",
 				"mhutchie.git-graph",
-                "redhat.vscode-yaml"
+				"redhat.vscode-yaml"
 			]
 		}
 	}

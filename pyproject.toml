@@ -1,52 +1,44 @@
-[tool.poetry]
+[project]
 name = "cs231n"
-package-mode = false
 version = "0.1.0"
-description = "cs231n assignment"
-authors = ["Deep Learning Study Group"]
-license = "MIT"
+description = ""
 readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "cython==3.0.10",
+    "future==1.0.0",
+    "h5py==3.11.0",
+    "imageio==2.34.1",
+    "matplotlib==3.8.4",
+    "numpy==1.26.4",
+    "optuna==3.6.1",
+    "pandas==2.2.2",
+    "pickleshare==0.7.5",
+    "scikit-learn==1.5.0",
+    "scipy==1.13.0",
+    "tabulate==0.9.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm==4.66.3",
+]
 
-[tool.poetry.dependencies]
-python = "~3.10"
-numpy = "1.26.4"
-pandas = "2.2.2"
-matplotlib = "3.8.4"
-pickleshare = "0.7.5"
-tqdm = "4.66.3"
-h5py = "3.11.0"
-tabulate = "0.9.0"
-scipy = "1.13.0"
-imageio = "2.34.1"
-future = "1.0.0"
-cython = "3.0.10"
-optuna = "3.6.1"
-scikit-learn = "1.5.0"
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "nbdev>=2.3.34",
+    "pre-commit>=4.1.0",
+    "ruff>=0.9.4",
+]
 
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
 
-[tool.poetry.group.dev.dependencies]
-ruff = "0.4.2"
-ipykernel = "6.29.4"
-pre-commit = "3.7.0"
-nbdev = "2.3.15"
-
-[tool.poetry.group.gpu]
-optional = true
-
-[tool.poetry.group.gpu.dependencies]
-torch = "2.3.0"
-torchvision = "0.18.0"
-
-[tool.poetry.group.docs]
-optional = true
-
-[tool.poetry.group.docs.dependencies]
-mkdocs = "1.6.0"
-mkdocs-material = "9.5.31"
-
-[tool.ruff]
-extend-include = ["*.ipynb"]
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
