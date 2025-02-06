@@ -9,19 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install poetry
-        run: pipx install poetry
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-          cache: "poetry"
+          python-version-file: ".python-version"
       - name: Install dependencies
-        run: poetry install
+        run: uv sync
       - name: Check code format
-        run: poetry run ruff format --check .
+        run: uv run ruff format --check .
       - name: Chack matadata
         run: |
-          poetry run nbdev_clean
+          uv run nbdev_clean
           git add .
           git diff --name-only --exit-code
