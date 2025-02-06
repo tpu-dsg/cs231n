@@ -7,27 +7,21 @@ cs231nの日本語訳教材。
 ### 依存関係のインストール
 
 ```shell
-poetry install --only docs
+uv sync --group docs
+# または最小限のパッケージのみをインストールする
+uv sync --only-group docs
 ```
-
-`pip`を使用する場合：
-
-```shell
-pip install mkdocs mkdocs-material
-```
-
-`pip`を使用する場合、最新の依存関係は[`pyproject.toml`](https://github.com/tpu-dsg/cs231n/blob/main/pyproject.toml)で確認してください。
 
 ### プレビューサーバーの起動
 
 ```shell
-mkdocs serve
+uv run mkdocs serve
 ```
 
 ### ビルド
 
 ```shell
-mkdocs build
+uv run mkdocs build
 ```
 
 ## 参考資料
