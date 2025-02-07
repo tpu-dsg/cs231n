@@ -15,13 +15,68 @@
 3. GoogleドライブからJupyter Notebookファイル(`*.ipynb` )を開きます。
 4. 先頭のセル中のパスを適切なものに変更します。
 
-### Docker（ローカル）
+### Dev Container
 
-Docker・[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)(GPUマシンのみ)・VSCodeをインストール済みの場合は、Devcontainerを使用して動かすことができます。
+DockerとVSCodeを用いたモダンな実行環境です。
+
+#### 前提条件
+
+以下が必要です。
+
+- CUDA対応GPU
+- Docker
+- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+- Visual Studio Code
+
+#### 手順
 
 1. VSCodeに[Remote Development拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)をインストールします。
 2. リポジトリをローカルにダウンロードしてVSCodeで開きます。
 3. トースト通知の「コンテナーで再度開く」をクリックします。
+
+### Jupyter Lab
+
+Anacondaのインストール不要で[Jupyter Lab](https://jupyter.org/)の実行環境が起動できます。
+
+#### 前提条件
+
+以下が必要です。
+
+- CUDA対応GPU
+- [uv](https://docs.astral.sh/uv/)
+
+#### 手順
+
+1. 「Code」ボタンをクリックしてコードをダウンロードします。
+2. ターミナルでリポジトリまで移動します。
+3. 以下のコマンドを**順番に**実行し、Jupyter Labを起動します。表示されたURLにアクセスしてください。
+
+   ```bash
+    uv sync
+    uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=project
+    uv run --with jupyter jupyter lab
+   ```
+
+### その他の方法
+
+「Dockerを用いないVSCode環境」など、お好きな実行環境が使用できます。
+
+#### 前提条件
+
+以下が必要です。
+
+- CUDA対応GPU
+- [uv](https://docs.astral.sh/uv/)
+
+#### 手順
+
+1. 「Code」ボタンをクリックしてコードをダウンロードします。
+2. ターミナルでリポジトリまで移動します。
+3. 以下のコマンドを実行し、依存するパッケージをインストールします。
+
+   ```bash
+    uv sync
+   ```
 
 ## 教材
 
