@@ -12,7 +12,7 @@ dependencies = [
     "matplotlib==3.8.4",
     "numpy==1.26.4",
     "optuna==3.6.1",
-    "pandas==2.2.2",
+    "pandas==2.2.3",
     "pickleshare==0.7.5",
     "scikit-learn==1.5.0",
     "scipy==1.13.0",
