@@ -209,7 +209,7 @@ for k in [1, 3, 5, 10, 20, 50, 100]:
   # kを引数として受け取れるように修正されたNearestNeighborクラスを仮定します
   Yval_predict = nn.predict(Xval_rows, k=k)
   acc = np.mean(Yval_predict == Yval)
-  print 'accuracy: %f' % (acc,)
+  print('accuracy: %f' % (acc,))
 
   # 検証セットでの結果を記録します
   validation_accuracies.append((k, acc))
