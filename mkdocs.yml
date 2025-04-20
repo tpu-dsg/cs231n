@@ -41,6 +41,7 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.blocks.caption
 plugins:
   - search:
       lang: ja
