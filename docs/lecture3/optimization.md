@@ -220,7 +220,7 @@ df = eval_numerical_gradient(CIFAR10_loss_fun, W)  # 勾配を計算
 
 ```python
 loss_original = CIFAR10_loss_fun(W)  # 元の損失を計算
-print 'original loss: %f' % (loss_original, )
+print('original loss: %f' % loss_original)
 
 # 複数のステップサイズでの効果を確認
 for step_size_log in [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1]:
